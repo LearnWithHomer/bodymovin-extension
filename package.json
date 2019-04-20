@@ -19,7 +19,7 @@
     "cross-spawn": "4.0.2",
     "css-loader": "0.26.0",
     "detect-port": "1.0.1",
-    "dotenv": "2.0.0",
+    "dotenv": "^2.0.0",
     "eslint": "3.8.1",
     "eslint-config-react-app": "^0.5.0",
     "eslint-loader": "1.6.0",
@@ -74,11 +74,11 @@
     "reselect": "^2.5.4"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "start-dev": "concurrently --kill-others \"node scripts/start.js\" \"gulp watch-extension\"",
-    "watch-gulp": "gulp watch-extension",
-    "build": "gulp create-bm-extension-player && node scripts/build.js && gulp copy-extension-bundle",
-    "test": "node scripts/test.js --env=jsdom"
+    "start": "node -r dotenv/config scripts/start.js",
+    "start-dev": "concurrently --kill-others \"node -r dotenv/config scripts/start.js\" \"node -r dotenv/config node_modules/.bin/gulp watch-extension\"",
+    "watch-gulp": "node -r dotenv/config node_modules/.bin/gulp watch-extension",
+    "build": "node -r dotenv/config node_modules/.bin/gulp create-bm-extension-player && node -r dotenv/config scripts/build.js && node -r dotenv/config node_modules/.bin/gulp copy-extension-bundle",
+    "test": "node -r dotenv/config scripts/test.js --env=jsdom"
   },
   "jest": {
     "collectCoverageFrom": [

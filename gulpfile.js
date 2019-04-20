@@ -11,7 +11,10 @@ var insert = require('gulp-insert');
 var version = '5.5.0'
 
 var extensionSource = './bundle';
-var extensionDestination = '/Library/Application Support/Adobe/CEP/extensions/com.bodymovin-homer.bodymovin-homer';
+var extensionDestination = process.env.EXTENSION_DESTINATION;
+if (!extensionDestination) {
+    throw new Error('Could not find EXTENSION_DESTINATION, please set this to the CEP folder in a .env file');
+}
 gulp.task('watch-extension', function() {
     gulp.src(extensionSource + '/**/*', {base: extensionSource})
         .pipe(watch(extensionSource, {base: extensionSource}))
