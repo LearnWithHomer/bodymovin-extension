@@ -1,4 +1,4 @@
-var gulp = require('gulp'); 
+var gulp = require('gulp');
 var watch = require('gulp-watch');
 var htmlreplace = require('gulp-html-replace');
 var eventstream = require("event-stream");
@@ -11,7 +11,7 @@ var insert = require('gulp-insert');
 var version = '5.5.0'
 
 var extensionSource = './bundle';
-var extensionDestination = '../../../tropi/AppData/Roaming/Adobe/CEP/extensions/bodymovin';
+var extensionDestination = '/Library/Application Support/Adobe/CEP/extensions/com.bodymovin-homer.bodymovin-homer';
 gulp.task('watch-extension', function() {
     gulp.src(extensionSource + '/**/*', {base: extensionSource})
         .pipe(watch(extensionSource, {base: extensionSource}))

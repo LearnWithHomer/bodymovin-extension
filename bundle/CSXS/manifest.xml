@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExtensionManifest Version="5.0" ExtensionBundleId="com.bodymovin.bodymovin" ExtensionBundleVersion="4.5.5"
-		ExtensionBundleName="bodymovin" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ExtensionManifest Version="5.0" ExtensionBundleId="com.bodymovin-homer.bodymovin-homer" ExtensionBundleVersion="4.5.5"
+		ExtensionBundleName="bodymovin-homer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<ExtensionList>
-		<Extension Id="com.bodymovin.bodymovin" Version="4.5.5" />
+		<Extension Id="com.bodymovin-homer.bodymovin-homer" Version="4.5.5" />
 	</ExtensionList>
 	<ExecutionEnvironment>
 		<HostList>
@@ -12,7 +12,7 @@
             <!-- Illustrator -->
             <!-- <Host Name="ILST" Version="[18.0,18.9]" />-->
             <!-- InDesign -->
-            <!-- <Host Name="IDSN" Version="[10.0,10.9]" /> -->          
+            <!-- <Host Name="IDSN" Version="[10.0,10.9]" /> -->
             <!-- Premiere -->
             <!-- <Host Name="PPRO" Version="[8.0,8.9]" /> -->
             <!-- AfterEffects -->
@@ -31,7 +31,7 @@
 		</RequiredRuntimeList>
 	</ExecutionEnvironment>
 	<DispatchInfoList>
-		<Extension Id="com.bodymovin.bodymovin">
+		<Extension Id="com.bodymovin-homer.bodymovin-homer">
 			<DispatchInfo >
 				<Resources>
 				<MainPath>./index_dev.html</MainPath>
@@ -47,7 +47,7 @@
 				</Lifecycle>
 				<UI>
 					<Type>Panel</Type>
-					<Menu>Bodymovin</Menu>
+					<Menu>Bodymovin-Homer</Menu>
 					<Geometry>
 						<Size>
 							<Height>500</Height>
@@ -61,7 +61,7 @@
                             <Height>550</Height>
                             <Width>400</Width>
                         </MaxSize>-->
-                        
+
 					</Geometry>
 					<Icons>
 						<Icon Type="Normal">./icons/iconNormal.png</Icon>
@@ -69,7 +69,7 @@
 						<Icon Type="Disabled">./icons/iconDisabled.png</Icon>
 						<Icon Type="DarkNormal">./icons/iconDarkNormal.png</Icon>
 						<Icon Type="DarkRollOver">./icons/iconDarkRollover.png</Icon>
-					</Icons>					
+					</Icons>
 				</UI>
 			</DispatchInfo>
 		</Extension>
