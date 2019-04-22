@@ -9,4 +9,8 @@ You will need to adjust your registry so that Adobe knows you are attempting to 
 
 Copy the .env.sample file into this same directory as .env. Then paste the location to the CEP extension folder after `EXTENSION_DESTINATION=` with no quotes.
 
+You will need to make sure you have node installed on your machine. I would recommend using nvm, which has different versions for [Windows](https://github.com/coreybutler/nvm-windows) and [Mac/Linux](https://github.com/creationix/nvm).
+
+With node installed, you'll need to pull in your dependencies. Navigate to this directory in your terminal, and run `npm i` or `npm install`.
+
 You should be ready to start development now. Go ahead and run `npm run start-dev` in a terminal. If you have After Effects open, please restart it. Go to Window > Extensions > Bodymovin-Homer and click it. You should see the extension. If you make any changes in the src directory, you should see the window refresh and those changes appear live.
